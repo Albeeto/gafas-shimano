@@ -1,0 +1,237 @@
+<!--
+Landing page para gafas deportivas SHIMANO
+Instrucciones:
+1) Coloca las 3 imágenes en una carpeta llamada "images" junto al archivo HTML con estos nombres:
+   - images/gafa1.webp
+   - images/gafa2.webp
+   - images/gafa3.webp
+   (Si no tienes webp, usa jpg/png y actualiza los nombres en el HTML)
+2) Reemplaza PHONE_WHATSAPP por tu número con código de país (ej: 57XXXXXXXXXX)
+3) Abre este archivo en tu navegador o súbelo a GitHub Pages / Netlify para publicar gratis.
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gafas Deportivas SHIMANO | Polarizadas UV400</title>
+  <meta name="description" content="Gafas deportivas Shimano con lentes polarizados UV400 — perfectas para ciclismo, pesca y actividades al aire libre.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#0f1720;
+      --accent-blue:#0077cc;
+      --accent-red:#e03131;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+      --max-width:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Inter',system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:linear-gradient(180deg,#07070a 0%, #0b1220 100%); color:#e6eef8; -webkit-font-smoothing:antialiased}
+    .container{max-width:var(--max-width); margin:40px auto; padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{font-weight:800;letter-spacing:2px;font-size:20px;color:var(--accent-blue)}
+    nav a{color:var(--muted); text-decoration:none; margin-left:16px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;margin-top:28px}
+    .hero-left h1{font-size:28px;margin:0 0 12px}
+    .tag{display:inline-block;background:var(--accent-red);color:white;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:12px}
+    .price-box{display:flex;align-items:center;gap:14px;margin-top:8px}
+    .price{font-weight:800;font-size:22px}
+    .old-price{font-size:14px;color:var(--muted);text-decoration:line-through}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{background:var(--accent-blue);color:white;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    /* Product card */
+    .product-card{background:var(--card);border-radius:12px;padding:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .gallery{display:flex;flex-direction:column;gap:10px}
+    .main-image{width:100%;height:300px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    .main-image img{max-width:100%;max-height:100%;object-fit:contain}
+    .thumbs{display:flex;gap:8px;margin-top:8px}
+    .thumbs img{width:72px;height:56px;object-fit:cover;border-radius:8px;cursor:pointer;opacity:0.95;border:2px solid transparent}
+    .thumbs img.active{border-color:var(--accent-blue)}
+    /* Sections */
+    section{margin-top:36px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .benefit{background:var(--glass);padding:18px;border-radius:10px}
+    .benefit h3{margin:0 0 8px}
+    .testimonials{display:flex;flex-direction:column;gap:12px}
+    .testimonial{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:10px}
+    footer{margin-top:48px;padding:20px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
+    /* WhatsApp floating */
+    .whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;color:#042;z-index:1000;padding:14px;border-radius:999px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 30px rgba(2,6,23,0.6);text-decoration:none}
+    .whatsapp img{width:22px;height:22px}
+    /* Countdown */
+    .countdown{display:inline-flex;gap:8px;align-items:center;background:rgba(0,0,0,0.25);padding:8px 12px;border-radius:999px;font-weight:700}
+    .countdown span{min-width:36px;text-align:center}
+    /* Responsive */
+    @media (max-width:1000px){.hero{grid-template-columns:1fr 360px}}
+    @media (max-width:800px){.hero{grid-template-columns:1fr;}.main-image{height:260px}.grid-3{grid-template-columns:1fr}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SHIMANO</div>
+        <div style="color:var(--muted);font-weight:600">Gafas deportivas • Polarizadas</div>
+      </div>
+      <nav>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#garantia">Garantía</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-left">
+        <div class="tag">Oferta limitada</div>
+        <h1>Gafas deportivas SHIMANO — Lentes Polarizadas UV400</h1>
+        <p style="color:var(--muted);margin-top:8px;line-height:1.5">Protege tu vista con lentes polarizados anti-reflejo diseñadas para las exigencias del ciclismo y la pesca. Ligereza y ajuste ergonómico para largas jornadas.</p>
+
+        <div class="price-box">
+          <div>
+            <div class="price">$89.900 <small style="font-size:14px;color:var(--muted);font-weight:600">COP</small></div>
+            <div class="old-price">Antes $112.400</div>
+          </div>
+          <div style="margin-left:auto">
+            <div class="countdown" id="countdown">--:--:--</div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" id="buyNow" href="#">Comprar ahora</a>
+          <button class="btn secondary" id="verMas">Ver características</button>
+        </div>
+
+        <ul style="margin-top:18px;color:var(--muted);line-height:1.7">
+          <li>Envío nacional en 48-72 horas.</li>
+          <li>Garantía de satisfacción: devolución en 7 días.</li>
+          <li>Pago seguro via transferencia o Nequi / Daviplata (coordinar por WhatsApp).</li>
+        </ul>
+      </div>
+
+      <aside class="product-card">
+        <div class="gallery">
+          <div class="main-image" id="mainImage">
+            <img src="images/gafa1.webp" alt="Gafas Shimano - vista principal" id="displayImg">
+          </div>
+          <div class="thumbs" id="thumbs">
+            <img src="images/gafa1.webp" data-src="images/gafa1.webp" class="active" alt="thumb1">
+            <img src="images/gafa2.webp" data-src="images/gafa2.webp" alt="thumb2">
+            <img src="images/gafa3.webp" data-src="images/gafa3.webp" alt="thumb3">
+          </div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+          <div style="font-weight:700">Gafas Shimano Polarizadas</div>
+          <div style="color:var(--muted);font-size:13px">Stock limitado</div>
+        </div>
+
+      </aside>
+    </main>
+
+    <section id="beneficios">
+      <h2>Beneficios</h2>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="benefit">
+          <h3>Protección UV400</h3>
+          <p style="color:var(--muted);margin:0">Filtra el 100% de los rayos UVA y UVB para proteger tu visión en exteriores.</p>
+        </div>
+        <div class="benefit">
+          <h3>Diseño ergonómico</h3>
+          <p style="color:var(--muted);margin:0">Agarre seguro y cómodo para días largos de entrenamiento o pesca.</p>
+        </div>
+        <div class="benefit">
+          <h3>Lentes polarizados anti-reflejo</h3>
+          <p style="color:var(--muted);margin:0">Mejora el contraste, reduce reflejos y la fatiga visual.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div class="testimonials" style="margin-top:12px">
+        <div class="testimonial">
+          <strong>Andrés P. • Ciclista</strong>
+          <p style="color:var(--muted);margin:8px 0 0">"Excelente ajuste y nitidez. He notado menos reflejos en rutas a primera hora."</p>
+        </div>
+        <div class="testimonial">
+          <strong>María L. • Pescadora</strong>
+          <p style="color:var(--muted);margin:8px 0 0">"Las uso todo el día cuando salgo a pescar — la protección UV es real."</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="garantia">
+      <h2>Garantía y Envío</h2>
+      <p style="color:var(--muted);margin-top:8px">Garantía de satisfacción: devolución y cambio en 7 días. Envío nacional en 48-72 horas con número de seguimiento.</p>
+    </section>
+
+    <section style="margin-top:28px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1;min-width:220px">
+        <h3>¿Listo para comprar?</h3>
+        <p style="color:var(--muted);margin-top:6px">Haz click en Comprar ahora y envíanos un mensaje por WhatsApp para coordinar tu pedido.</p>
+      </div>
+      <div>
+        <a class="btn" id="buyNowBottom" href="#">Comprar ahora por WhatsApp</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>SHIMANO • Gafas Deportivas</div>
+      <div style="color:var(--muted)">© <span id="year"></span> Todos los derechos reservados</div>
+    </footer>
+  </div>
+
+  <!-- WhatsApp flotante -->
+  <a class="whatsapp" id="whatsBtn" href="https://wa.me/PHONE_WHATSAPP?text=Hola,%20estoy%20interesado%20en%20las%20gafas%20Shimano,%20%C2%BFme%20das%20m%C3%A1s%20informaci%C3%B3n?" target="_blank">
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23FFFFFF' d='M20.5 3.5A11.9 11.9 0 0 0 12 1C6 1 1.2 5.6 1.2 11.5c0 2 .5 3.9 1.4 5.6L1 23l5.9-1.5c1.6.9 3.6 1.4 5.8 1.4 6 0 10.8-4.6 10.8-10.5 0-3-1.2-5.7-3-7.9zM12 20.2c-1.8 0-3.4-.5-4.8-1.3l-.3-.2-3.5.9.9-3.4-.2-.3A7.1 7.1 0 0 1 4.9 8.5c0-3.8 3.2-6.9 7.1-6.9 3.8 0 6.9 3.1 6.9 6.9 0 3.9-3.1 7.1-6.9 7.1z'/></svg>" alt="WhatsApp">
+    <div style="font-weight:700;color:white">WhatsApp</div>
+  </a>
+
+  <script>
+    // Fill copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Thumbnail click behavior
+    const thumbs = document.querySelectorAll('#thumbs img');
+    const display = document.getElementById('displayImg');
+    thumbs.forEach(t=>t.addEventListener('click', ()=>{
+      thumbs.forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      display.src = t.dataset.src || t.src;
+    }))
+
+    // Buttons open WhatsApp with prefilled text
+    const WHATS_LINK = document.getElementById('whatsBtn').href;
+    document.getElementById('buyNow').addEventListener('click', (e)=>{ e.preventDefault(); window.open(WHATS_LINK, '_blank'); })
+    document.getElementById('buyNowBottom').addEventListener('click', (e)=>{ e.preventDefault(); window.open(WHATS_LINK, '_blank'); })
+
+    // Ver mas -> scroll to beneficios
+    document.getElementById('verMas').addEventListener('click', ()=>{ document.getElementById('beneficios').scrollIntoView({behavior:'smooth'}); })
+
+    // Countdown to end of day
+    function updateCountdown(){
+      const now = new Date();
+      const end = new Date(); end.setHours(23,59,59,999);
+      let diff = Math.max(0, end - now);
+      const hrs = String(Math.floor(diff/3600000)).padStart(2,'0');
+      diff %=3600000;
+      const mins = String(Math.floor(diff/60000)).padStart(2,'0');
+      diff %=60000;
+      const secs = String(Math.floor(diff/1000)).padStart(2,'0');
+      document.getElementById('countdown').textContent = hrs+":"+mins+":"+secs;
+    }
+    updateCountdown(); setInterval(updateCountdown,1000);
+
+    // Suggested accessibility improvements (console note)
+    console.log('Recuerda actualizar PHONE_WHATSAPP en el href del botón WhatsApp y colocar las imágenes en /images/.');
+  </script>
+</body>
+</html>
